@@ -1,0 +1,5 @@
+{
+  "_note": "Check the current official GST rates and update this file. Do not hard-code rates in the tool logic.",
+  "rates": [],
+  "verify": true
+}

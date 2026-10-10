@@ -1,0 +1,25 @@
+{
+  "_note": "Placeholders only. Fill with real sizes from the official exam notification and set verify to false after checking.",
+  "presets": [
+    {
+      "name": "Example: exam photo",
+      "width": 0,
+      "height": 0,
+      "minKB": 0,
+      "maxKB": 0,
+      "format": "jpg",
+      "note": "Check your exam notice for the exact size.",
+      "verify": true
+    },
+    {
+      "name": "Example: exam signature",
+      "width": 0,
+      "height": 0,
+      "minKB": 0,
+      "maxKB": 0,
+      "format": "jpg",
+      "note": "Check your exam notice for the exact size.",
+      "verify": true
+    }
+  ]
+}

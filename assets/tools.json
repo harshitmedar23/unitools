@@ -1,0 +1,347 @@
+[
+  {
+    "id": "merge-pdf",
+    "name": "Merge PDF",
+    "title": "Merge PDF online, free",
+    "description": "Combine several PDFs into one file.",
+    "category": "PDF",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "combine pdf",
+      "join pdf",
+      "merge pdf files"
+    ],
+    "url": "/tools/merge-pdf.html"
+  },
+  {
+    "id": "split-pdf",
+    "name": "Split PDF",
+    "title": "Split PDF online, free",
+    "description": "Extract page ranges or split every page.",
+    "category": "PDF",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "extract pages",
+      "separate pdf",
+      "split pdf pages"
+    ],
+    "url": "/tools/split-pdf.html"
+  },
+  {
+    "id": "jpg-to-pdf",
+    "name": "JPG to PDF",
+    "title": "JPG to PDF online, free",
+    "description": "Turn images into one PDF.",
+    "category": "PDF",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "image to pdf",
+      "photo to pdf",
+      "png to pdf"
+    ],
+    "url": "/tools/jpg-to-pdf.html"
+  },
+  {
+    "id": "pdf-to-jpg",
+    "name": "PDF to JPG",
+    "title": "PDF to JPG online, free",
+    "description": "Convert each PDF page to an image.",
+    "category": "PDF",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "pdf to image",
+      "pdf to png",
+      "pdf pages to jpg"
+    ],
+    "url": "/tools/pdf-to-jpg.html"
+  },
+  {
+    "id": "compress-image",
+    "name": "Compress image",
+    "title": "Compress image to 50 KB, 100 KB or 200 KB",
+    "description": "Reduce a photo to a target size for forms.",
+    "category": "Image",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "reduce image size",
+      "compress photo",
+      "image to 50kb",
+      "jpg compressor"
+    ],
+    "url": "/tools/compress-image.html"
+  },
+  {
+    "id": "resize-image",
+    "name": "Resize image",
+    "title": "Resize photo and signature for exam forms",
+    "description": "Exact pixel sizes with exam and job form presets.",
+    "category": "Image",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "resize photo",
+      "signature size",
+      "exam photo",
+      "passport size"
+    ],
+    "url": "/tools/resize-image.html"
+  },
+  {
+    "id": "qr-code-generator",
+    "name": "QR code generator",
+    "title": "QR code generator, free, no watermark",
+    "description": "Make a QR code for a link, text or Wi-Fi.",
+    "category": "Text and Code",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "qr code",
+      "wifi qr",
+      "link to qr"
+    ],
+    "url": "/tools/qr-code-generator.html"
+  },
+  {
+    "id": "clean-ai-code",
+    "name": "Clean AI code",
+    "title": "Remove invisible characters from AI text and code",
+    "description": "Find and remove hidden characters, odd spaces and smart quotes.",
+    "category": "Text and Code",
+    "phase": 1,
+    "runs": "browser",
+    "keywords": [
+      "zero width space",
+      "invisible characters",
+      "clean chatgpt text",
+      "remove as an ai"
+    ],
+    "url": "/tools/clean-ai-code.html"
+  },
+  {
+    "id": "quick-share",
+    "name": "Quick share",
+    "title": "Send a file with a 5-digit code",
+    "description": "Upload a file, get a 5-digit code. Valid for 10 minutes.",
+    "category": "Share",
+    "phase": 2,
+    "runs": "server",
+    "keywords": [
+      "send file",
+      "share file nearby",
+      "file code"
+    ],
+    "url": "/tools/quick-share.html"
+  },
+  {
+    "id": "link-share",
+    "name": "Link share",
+    "title": "Share a file with a private link",
+    "description": "A long random link and QR. Expires in 10 minutes to 24 hours.",
+    "category": "Share",
+    "phase": 2,
+    "runs": "server",
+    "keywords": [
+      "share file link",
+      "temporary link",
+      "send large file"
+    ],
+    "url": "/tools/link-share.html"
+  },
+  {
+    "id": "receive-file",
+    "name": "Receive file",
+    "title": "Receive a shared file",
+    "description": "Enter a code or open a link to download.",
+    "category": "Share",
+    "phase": 2,
+    "runs": "server",
+    "keywords": [
+      "download shared file",
+      "enter code"
+    ],
+    "url": "/tools/receive-file.html"
+  },
+  {
+    "id": "compress-pdf",
+    "name": "Compress PDF",
+    "title": "Compress PDF online, free",
+    "description": "Make a PDF smaller.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": [
+      "reduce pdf size",
+      "shrink pdf"
+    ],
+    "url": "/tools/compress-pdf.html"
+  },
+  {
+    "id": "image-converter",
+    "name": "Image converter",
+    "title": "Convert JPG, PNG and WebP",
+    "description": "Switch between JPG, PNG and WebP.",
+    "category": "Image",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": [
+      "png to jpg",
+      "jpg to png",
+      "webp to jpg"
+    ],
+    "url": "/tools/image-converter.html"
+  },
+  {
+    "id": "word-counter",
+    "name": "Word and character counter",
+    "title": "Word and character counter",
+    "description": "Words, characters, sentences and reading time.",
+    "category": "Text and Code",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": [
+      "character count",
+      "word count",
+      "reading time"
+    ],
+    "url": "/tools/word-counter.html"
+  },
+  {
+    "id": "password-generator",
+    "name": "Password generator",
+    "title": "Random password generator",
+    "description": "Strong random passwords and passphrases.",
+    "category": "Text and Code",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": [
+      "strong password",
+      "passphrase",
+      "random password"
+    ],
+    "url": "/tools/password-generator.html"
+  },
+  {
+    "id": "age-calculator",
+    "name": "Age calculator",
+    "title": "Age calculator: exact age in years, months and days",
+    "description": "Exact age from a date of birth.",
+    "category": "Calculators",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "calculate age",
+      "date of birth",
+      "age on date"
+    ],
+    "url": "/tools/age-calculator.html"
+  },
+  {
+    "id": "percentage-calculator",
+    "name": "Percentage calculator",
+    "title": "Percentage calculator",
+    "description": "Common percentage problems, with the working.",
+    "category": "Calculators",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "percent",
+      "percentage change",
+      "percent of"
+    ],
+    "url": "/tools/percentage-calculator.html"
+  },
+  {
+    "id": "emi-calculator",
+    "name": "EMI calculator",
+    "title": "EMI calculator for loans",
+    "description": "Monthly EMI, total interest and total payment.",
+    "category": "Calculators",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "loan emi",
+      "home loan",
+      "interest calculator"
+    ],
+    "url": "/tools/emi-calculator.html"
+  },
+  {
+    "id": "gst-calculator",
+    "name": "GST calculator",
+    "title": "GST calculator: add or remove GST",
+    "description": "Add GST to a price or take it out.",
+    "category": "Calculators",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "gst",
+      "tax calculator",
+      "cgst sgst"
+    ],
+    "url": "/tools/gst-calculator.html"
+  },
+  {
+    "id": "cgpa-calculator",
+    "name": "CGPA / SGPA calculator",
+    "title": "CGPA and SGPA calculator",
+    "description": "Grade points and credits to SGPA and CGPA.",
+    "category": "Student",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "sgpa",
+      "cgpa",
+      "grade point"
+    ],
+    "url": "/tools/cgpa-calculator.html"
+  },
+  {
+    "id": "attendance-calculator",
+    "name": "Attendance calculator",
+    "title": "Attendance percentage calculator",
+    "description": "Current attendance and classes needed for your target.",
+    "category": "Student",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "attendance percentage",
+      "75 percent attendance",
+      "bunk"
+    ],
+    "url": "/tools/attendance-calculator.html"
+  },
+  {
+    "id": "json-formatter",
+    "name": "JSON formatter",
+    "title": "JSON formatter and validator",
+    "description": "Format, validate and minify JSON.",
+    "category": "Text and Code",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "json beautifier",
+      "json validator",
+      "json minify"
+    ],
+    "url": "/tools/json-formatter.html"
+  },
+  {
+    "id": "base64",
+    "name": "Base64 encode / decode",
+    "title": "Base64 encode and decode",
+    "description": "Text to Base64 and back.",
+    "category": "Text and Code",
+    "phase": 3,
+    "runs": "browser",
+    "keywords": [
+      "base64 encode",
+      "base64 decode"
+    ],
+    "url": "/tools/base64.html"
+  }
+]

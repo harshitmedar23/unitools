@@ -1,0 +1,11 @@
+---
+applyTo: "**/*.js"
+---
+- ES modules only. No frameworks, no jQuery. Import helpers from `/assets/common.js`.
+- Browser tools: never send user files over the network.
+- Validate file type and size before processing. Show errors with the shared `showError()` helper, in plain words, with a next step.
+- Revoke object URLs (`URL.revokeObjectURL`) when finished. Release canvases and large buffers after use.
+- Heavy work goes in a Web Worker or is chunked so the UI stays responsive. Show progress after 300 ms.
+- Use `crypto.getRandomValues` for anything random that matters (passwords, codes, keys). Never `Math.random`.
+- Output file names should be meaningful: `merged.pdf`, `photo-50kb.jpg`.
+- Test the small case, the large case, an empty input, a wrong file type, and a phone.
