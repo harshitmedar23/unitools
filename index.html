@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free browser tools for files, images, text and numbers. Nothing is uploaded unless it says so.">
+  <title>Free online tools: UniTools</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/common.js"></script>
+  <script type="module" src="/assets/js/home.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="wordmark" href="/">UniTools</a>
+      <nav class="header-actions" aria-label="Site controls">
+        <a class="quiet-link" href="#tools">Search tools</a>
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme">
+          <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-width home-main">
+    <h1 class="sr-only">UniTools</h1>
+    <p class="intro-line">Free tools for files, images, text and numbers. Nothing is uploaded unless it says so.</p>
+
+    <section class="search-section" id="tools" aria-labelledby="search-heading">
+      <h2 class="sr-only" id="search-heading">Search tools</h2>
+      <label class="sr-only" for="tool-search">Search tools</label>
+      <div class="search-field">
+        <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#search"></use></svg>
+        <input id="tool-search" type="search" autocomplete="off" placeholder="Search tools" data-tool-search>
+      </div>
+      <p class="search-status" data-search-status aria-live="polite"></p>
+    </section>
+
+    <div class="tool-groups" data-tool-list></div>
+    <p class="empty-state" data-empty-state hidden>No tools match that search.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p>
+    </div>
+  </footer>
+</body>
+</html>

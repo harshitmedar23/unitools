@@ -2,7 +2,7 @@
 
 ## Steps
 - [ ] 0 Setup
-- [ ] 1 Skeleton (index, style.css, common.js, icons, tools.json, Pages live)
+- [x] 1 Skeleton (index, style.css, common.js, icons, tools.json, Pages live)
 - [ ] 2 First 3 tools
 - [ ] 3 Feedback round
 - [ ] 4 Finish Phase 1
