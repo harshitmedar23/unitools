@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Free online PDF and image conversion tools. Compress, merge, split and convert files in your browser.">
-  <title>PDF and image tools online: UniTools</title>
+  <meta name="description" content="Organize, compress, convert, edit and compare PDF files with free browser tools from UniTools.">
+  <title>PDF tools online: UniTools</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
   <script type="module" src="/assets/common.js"></script>
-  <script type="module" src="/assets/js/public-home.js?v=1"></script>
+  <script type="module" src="/assets/js/public-home.js?v=2"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="page-width header-inner">
       <a class="wordmark" href="/">UniTools</a>
       <nav class="header-actions" aria-label="Site controls">
-        <a class="quiet-link" href="#file-tools">File tools</a>
+        <a class="quiet-link" href="#pdf-tools">PDF tools</a>
         <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme">
           <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg>
         </button>
@@ -23,33 +23,28 @@
     </div>
   </header>
 
-  <main class="page-width public-main">
-    <p class="public-kicker">PDF and image tools</p>
-    <h1>Convert and compress files in your browser.</h1>
-    <p class="public-intro">Merge, split, compress and convert PDFs and images without uploading your files.</p>
+  <main class="public-main" id="pdf-tools">
+    <p class="public-kicker">PDF TOOLKIT</p>
+    <h1>Tools for everyday PDF work</h1>
+    <p class="public-intro">Organize, convert, edit and compare documents in your browser. Local tools keep files on this device.</p>
 
-    <section class="public-section" id="file-tools" aria-labelledby="file-tools-heading">
-      <div class="public-section-heading">
-        <h2 id="file-tools-heading">File conversions</h2>
-        <p>Common PDF and image jobs, ready when you need them.</p>
+    <section class="public-directory" data-public-directory aria-label="PDF tools by task">
+      <label class="sr-only" for="public-tool-search">Search PDF tools</label>
+      <div class="search-field public-search">
+        <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#search"></use></svg>
+        <input id="public-tool-search" type="search" autocomplete="off" placeholder="Search PDF tools" data-public-search>
       </div>
-      <div class="public-tool-grid" data-public-file-tools></div>
+      <p class="search-status" data-public-search-status aria-live="polite"></p>
+      <div class="public-category-grid" data-public-categories></div>
+      <p class="empty-state" data-public-empty hidden>No matching PDF tools.</p>
     </section>
 
-    <section class="public-section" aria-labelledby="privacy-heading">
-      <div class="public-note">
-        <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>
-        <div>
-          <h2 id="privacy-heading">Your files stay on your device.</h2>
-          <p>Browser tools process files locally. Nothing is uploaded unless a tool clearly says it uses a server.</p>
-        </div>
-      </div>
-    </section>
+    <p class="public-privacy"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Browser tools process files on your device. Items marked “Not available yet” are not currently offered.</p>
   </main>
 
   <footer class="site-footer">
     <div class="page-width footer-inner">
-      <p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> More browser tools are unlisted.</p>
+      <p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p>
     </div>
   </footer>
 </body>

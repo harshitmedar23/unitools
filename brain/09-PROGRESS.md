@@ -40,6 +40,8 @@
 - [x] Extract embedded images from PDFs
 - [x] Add signature images to PDFs
 - [x] Generate PDF page thumbnail contact sheets
+- [x] Crop PDF page edges
+- [x] Fill standard PDF text, checkbox, dropdown and radio fields
 ### Phase 3
 - [x] 16 Age calculator
 - [x] 17 Percentage calculator
@@ -69,3 +71,4 @@
 - CSV to XLSX and XLSX to CSV use the locally vendored SheetJS 0.18.5 build and convert only in the browser.
 - DOCX, PPTX, EPUB and OCR conversions are not listed: no local browser libraries are vendored for reliable output.
 - HTML to PDF uses the browser print dialog and asks the user to choose Save as PDF; it does not claim to render HTML through pdf-lib.
+- The public PDF directory groups implemented operations and marks unsupported items as unavailable. OCR, PDF repair, PDF encryption/decryption, Word/PowerPoint/Excel conversion, PDF/A conversion, redaction, AI summaries and translation need additional engines or services and must not be advertised as working.

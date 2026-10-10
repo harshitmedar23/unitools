@@ -85,6 +85,28 @@
     "url": "/tools/headers-footers-pdf.html"
   },
   {
+    "id": "crop-pdf",
+    "name": "Crop PDF",
+    "title": "Crop PDF pages online",
+    "description": "Trim page edges by setting margins in points.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["crop pdf", "trim pdf pages", "crop margins"],
+    "url": "/tools/crop-pdf.html"
+  },
+  {
+    "id": "pdf-forms",
+    "name": "Fill PDF forms",
+    "title": "Fill PDF forms online",
+    "description": "Fill supported text, checkbox, dropdown and radio fields.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["fill pdf form", "fillable pdf", "pdf form fields"],
+    "url": "/tools/pdf-forms.html"
+  },
+  {
     "id": "pdf-metadata",
     "name": "Edit PDF metadata",
     "title": "Edit PDF metadata online",

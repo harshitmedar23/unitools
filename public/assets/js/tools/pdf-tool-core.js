@@ -87,6 +87,22 @@ async function runPdfOperation(kind, source, c) {
     pdf.getPages().forEach((page, index) => { const { width, height } = page.getSize(); if (header) page.drawText(header.replace("{page}", String(index + 1)), { x: 24, y: height - 24, size: 9, font }); if (footer) page.drawText(footer.replace("{page}", String(index + 1)), { x: 24, y: 18, size: 9, font }); });
     return { bytes: await savePdf(pdf), filename: "header-footer.pdf", summary: `Done. Added headers and footers to ${pdf.getPageCount()} pages.` };
   }
+  if (kind === "crop") {
+    const pdf = await readPdf(source);
+    const left = Number(option(c.root, "left").value || 0);
+    const right = Number(option(c.root, "right").value || 0);
+    const top = Number(option(c.root, "top").value || 0);
+    const bottom = Number(option(c.root, "bottom").value || 0);
+    if ([left, right, top, bottom].some((value) => value < 0 || !Number.isFinite(value))) throw new Error("Margins must be zero or greater.");
+    pdf.getPages().forEach((page) => {
+      const box = page.getCropBox();
+      const width = box.width - left - right;
+      const height = box.height - top - bottom;
+      if (width <= 0 || height <= 0) throw new Error("Those margins leave no printable page area. Reduce the crop amounts.");
+      page.setCropBox(box.x + left, box.y + bottom, width, height);
+    });
+    return { bytes: await savePdf(pdf), filename: "cropped.pdf", summary: `Done. Cropped ${pdf.getPageCount()} pages.` };
+  }
   if (kind === "metadata") {
     const pdf = await readPdf(source); pdf.setTitle(option(c.root, "title").value); pdf.setAuthor(option(c.root, "author").value); pdf.setSubject(option(c.root, "subject").value); pdf.setKeywords(option(c.root, "keywords").value.split(",").map((item) => item.trim()).filter(Boolean));
     return { bytes: await savePdf(pdf), filename: "metadata-edited.pdf", summary: "Done. Updated the PDF metadata." };
