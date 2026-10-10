@@ -123,50 +123,6 @@
     "url": "/tools/clean-ai-code.html"
   },
   {
-    "id": "quick-share",
-    "name": "Quick share",
-    "title": "Send a file with a 5-digit code",
-    "description": "Upload a file, get a 5-digit code. Valid for 10 minutes.",
-    "category": "Share",
-    "phase": 2,
-    "runs": "server",
-    "keywords": [
-      "send file",
-      "share file nearby",
-      "file code"
-    ],
-    "url": "/tools/quick-share.html"
-  },
-  {
-    "id": "link-share",
-    "name": "Link share",
-    "title": "Share a file with a private link",
-    "description": "A long random link and QR. Expires in 10 minutes to 24 hours.",
-    "category": "Share",
-    "phase": 2,
-    "runs": "server",
-    "keywords": [
-      "share file link",
-      "temporary link",
-      "send large file"
-    ],
-    "url": "/tools/link-share.html"
-  },
-  {
-    "id": "receive-file",
-    "name": "Receive file",
-    "title": "Receive a shared file",
-    "description": "Enter a code or open a link to download.",
-    "category": "Share",
-    "phase": 2,
-    "runs": "server",
-    "keywords": [
-      "download shared file",
-      "enter code"
-    ],
-    "url": "/tools/receive-file.html"
-  },
-  {
     "id": "compress-pdf",
     "name": "Compress PDF",
     "title": "Compress PDF online, free",
