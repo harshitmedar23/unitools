@@ -26,7 +26,7 @@ function renderTools(tools, container) {
 initTheme();
 const toolList = document.querySelector("[data-tool-list]");
 const searchInput = document.querySelector("[data-tool-search]");
-const tools = await fetch("/assets/tools.json").then((response) => response.json());
+const tools = await fetch("/assets/tools.json", { cache: "no-store" }).then((response) => response.json());
 renderTools(tools, toolList);
 initSearch(searchInput, toolList);
 if (matchMedia("(min-width: 700px)").matches) searchInput.focus();
