@@ -42,7 +42,7 @@ Image > JPG under a target size.
 
 ### 6. Resize image  (Canvas API)
 Image > exact pixel size, optionally under a max KB.
-- Presets live in `assets/data/presets.json`: `{ name, width, height, maxKB, minKB, format, note }`. Every preset has `"verify": true` until the user has checked the official notification. Show the note "Check your exam notice for the exact size."
+- Presets live in `public/assets/data/presets.json`: `{ name, width, height, maxKB, minKB, format, note }`. Every preset has `"verify": true` until the user has checked the official notification. Show the note "Check your exam notice for the exact size."
 - Fit modes: crop to fill (default, drag to reposition), pad, stretch. Lock aspect ratio for custom sizes.
 - Units: px, cm and inches (need DPI, default 300).
 - If maxKB is set, reuse the compress logic from tool 5.
@@ -101,7 +101,7 @@ Four modes: X% of Y; X is what % of Y; change from X to Y (% increase/decrease);
 Principal, annual rate, tenure (years or months). `r = rate/12/100`, `EMI = P*r*(1+r)^n / ((1+r)^n - 1)`. If rate is 0, EMI = P/n. Show EMI, total interest, total payment, principal-vs-interest bar, collapsible month-wise table.
 
 ### 19. GST calculator
-Add GST (net > gross) and remove GST (gross > net). Show net, GST, gross, and CGST/SGST split. Rate buttons come from `assets/data/gst-rates.json` plus a custom rate field. Mark the rates "verify" and never hard-code them in the logic.
+Add GST (net > gross) and remove GST (gross > net). Show net, GST, gross, and CGST/SGST split. Rate buttons come from `public/assets/data/gst-rates.json` plus a custom rate field. Mark the rates "verify" and never hard-code them in the logic.
 
 ### 20. CGPA / SGPA calculator
 - Grade point map is editable (default a common 10-point scale: O 10, A+ 9, A 8, B+ 7, B 6, C 5, P 4, F 0; universities differ, so say "edit to match your university").

@@ -51,6 +51,6 @@ Worker generates codes with `crypto.getRandomValues` and retries if the code alr
 - Never log file names, contents, or full IP addresses.
 
 ## Pages
-- `tools/quick-share.html`, `tools/link-share.html`, `tools/receive-file.html`.
+- `public/tools/quick-share.html`, `public/tools/link-share.html`, `public/tools/receive-file.html`.
 - After upload: large code in mono type, a live countdown, a Copy button, and (link share) a QR using the same QR code library, plus a Delete button.
 - Receive: one input (code or link), password field appears only if needed, clear error messages ("Wrong code. 3 tries left.", "This file has expired.").

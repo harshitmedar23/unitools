@@ -16,7 +16,7 @@ Done when: empty repo with the brain exists on GitHub.
 
 ## Step 1: Skeleton (days 2 to 4)
 Prompt:
-> Read brain/00, 02, 03, 04. Build the site skeleton: index.html, assets/style.css (tokens from 02 exactly), assets/common.js (functions listed in 04), assets/icons.svg (icons listed in 02), assets/tools.json (already exists, use it), favicon.svg, a header with wordmark + search link + theme toggle, home page with search and flat tool cards grouped by category, light/dark mode, and a footer. Follow the "Never do this" list. No hero. Then run `/design-review`.
+> Read brain/00, 02, 03, 04. Build the site skeleton: public/index.html, public/assets/style.css (tokens from 02 exactly), public/assets/common.js (functions listed in 04), public/assets/icons.svg (icons listed in 02), public/assets/tools.json (already exists, use it), public/favicon.svg, a header with wordmark + search link + theme toggle, home page with search and flat tool cards grouped by category, light/dark mode, and a footer. Follow the "Never do this" list. No hero. Then run `/design-review`.
 
 Then: connect the repo to Cloudflare Pages (no build command, root directory).
 Done when: site is live on a `pages.dev` link and looks right on your phone.
@@ -40,7 +40,7 @@ Create a free Google Form for requests and bugs and link it in the footer.
 > `/new-tool` Split PDF
 > `/new-tool` JPG to PDF
 > `/new-tool` PDF to JPG
-> `/new-tool` Resize image (fill `assets/data/presets.json` with the real exam sizes first; check the official notification)
+> `/new-tool` Resize image (fill `public/assets/data/presets.json` with the real exam sizes first; check the official notification)
 > `/new-tool` Clean AI code
 
 Done when: all 8 Phase 1 tools are live.

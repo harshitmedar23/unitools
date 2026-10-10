@@ -10,7 +10,7 @@ Configure these names in the Cloudflare dashboard or Wrangler:
 - `META`: KV namespace binding for metadata, expiry records, and hashed rate-limit counters.
 - `ALLOWED_ORIGIN`: a plain Worker environment variable containing the exact Pages/site origin, such as `https://example.pages.dev`. Do not put a secret here.
 
-The browser pages use `/api` by default. Deploy this Worker behind that path on the site origin, or change the `share-api` meta tag on the three sharing pages to the Worker API base URL. If the Worker is on another origin, set `ALLOWED_ORIGIN` to the Pages origin; no wildcard CORS is supported.
+The browser pages in `public/tools/` use `/api` by default. Deploy this Worker behind that path on the site origin, or change the `share-api` meta tag on the three sharing pages to the Worker API base URL. If the Worker is on another origin, set `ALLOWED_ORIGIN` to the Pages origin; no wildcard CORS is supported.
 
 ## Wrangler shape
 

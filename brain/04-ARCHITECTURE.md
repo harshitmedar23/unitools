@@ -17,26 +17,26 @@ Free-tier limits change. Check Cloudflare's current pricing pages before launch.
 
 ## Folders
 ```
-/index.html                 home: search + tool cards
-/tools/<slug>.html          one file per tool
-/assets/style.css           all shared styles + design tokens
-/assets/common.js           shared helpers (see below)
-/assets/tools.json          list of all tools (home page and search read it)
-/assets/icons.svg           icon sprite
-/assets/fonts/              self-hosted woff2
-/assets/vendor/             pinned third-party libraries (never CDN)
-/assets/data/               presets.json, gst-rates.json, wordlist.txt
-/assets/js/tools/<slug>.js  logic for one tool
-/privacy.html  /feedback link  /sitemap.xml  /robots.txt  /favicon.svg
+/public/index.html          home: search + tool cards
+/public/tools/<slug>.html   one file per tool
+/public/assets/style.css    all shared styles + design tokens
+/public/assets/common.js    shared helpers (see below)
+/public/assets/tools.json   list of all tools (home page and search read it)
+/public/assets/icons.svg    icon sprite
+/public/assets/fonts/       self-hosted woff2
+/public/assets/vendor/      pinned third-party libraries (never CDN)
+/public/assets/data/        presets.json, gst-rates.json, wordlist.txt
+/public/assets/js/tools/<slug>.js logic for one tool
+/public/privacy.html  /public/feedback link  /public/sitemap.xml  /public/robots.txt  /public/favicon.svg
 /worker/                    Cloudflare Worker (added in Phase 2)
 /brain/  /.github/          project memory and Copilot config
 ```
 
 ## Adding a tool = 3 things
-1. `tools/<slug>.html` (copy `brain/templates/tool-page.html`)
-2. `assets/js/tools/<slug>.js`
-3. one entry in `assets/tools.json`
-Nothing else changes. The home page cards and search read `tools.json`.
+1. `public/tools/<slug>.html` (copy `brain/templates/tool-page.html`)
+2. `public/assets/js/tools/<slug>.js`
+3. one entry in `public/assets/tools.json`
+Nothing else changes. The home page cards and search read `public/assets/tools.json`.
 
 ## tools.json entry
 ```json
@@ -69,9 +69,9 @@ Categories: PDF, Image, Share, Text and Code, Calculators, Student.
 Keep each function small and documented in one line.
 
 ## Libraries
-- Download the exact release file once, save it in `assets/vendor/<name>-<version>.min.js`, and commit it. Note the version and license in `assets/vendor/README.md`.
+- Download the exact release file once, save it in `public/assets/vendor/<name>-<version>.min.js`, and commit it. Note the version and license in `public/assets/vendor/README.md`.
 - Lazy load with `loadScript` only on the pages that need them.
 
 ## Hosting setup (Cloudflare Pages)
-- Connect the GitHub repo, no build command, output directory is the repo root.
+- Connect the GitHub repo, no build command, output directory is `public`.
 - Add a `_headers` file: `X-Content-Type-Options: nosniff`, `Referrer-Policy: no-referrer`, and a strict Content-Security-Policy that allows only self (tool pages must not allow connections to other origins; only the three sharing tools may connect to the Worker).

@@ -41,4 +41,4 @@
 
 ## Open decisions and notes
 (Add anything undecided or learned here, one line each.)
-- Sharing tools are hidden from assets/tools.json until the Worker has real R2/KV bindings and passes deployed API tests.
+- Sharing tools are hidden from public/assets/tools.json until the Worker has real R2/KV bindings and passes deployed API tests.

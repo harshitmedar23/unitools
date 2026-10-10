@@ -20,7 +20,7 @@ This folder is the memory of the project. Copilot reads `.github/copilot-instruc
 
 ## How to use it (VS Code + Copilot + Git)
 
-1. Create the repo `unitools` on GitHub. Clone it. Copy `.github/`, `brain/` and `assets/` from this zip into the repo root. Commit: `add: project brain`.
+1. Create the repo `unitools` on GitHub. Clone it. Copy `.github/`, `brain/` and `public/assets/` from this zip into the repo root. Commit: `add: project brain`.
 2. In VS Code, open the folder. Open Copilot Chat and switch to **Agent** mode.
 3. Open `06-BUILD-PLAN.md` and run the steps in order. Each step has a prompt you paste in.
 4. For each tool, type `/new-tool` in chat, enter the tool name, and let it work.

@@ -12,9 +12,9 @@ You are helping build UniTools: a free website of everyday online tools (PDF, im
 
 ## Non-negotiable rules
 1. Plain HTML, CSS and JavaScript (ES modules). No React, no Tailwind, no build step, no npm bundler.
-2. One tool = one HTML file in `/tools/` + one JS file in `/assets/js/tools/` + one entry in `/assets/tools.json`. Nothing else should need to change.
-3. Shared styles live in `/assets/style.css`. Shared helpers live in `/assets/common.js`. Do not copy-paste helpers into tool files.
-4. Third-party libraries are downloaded once, pinned to a version, and saved in `/assets/vendor/`. No CDN links. No trackers. No external fonts at runtime.
+2. One tool = one HTML file in `/public/tools/` + one JS file in `/public/assets/js/tools/` + one entry in `/public/assets/tools.json`. Nothing else should need to change.
+3. Shared styles live in `/public/assets/style.css`. Shared helpers live in `/public/assets/common.js`. Do not copy-paste helpers into tool files.
+4. Third-party libraries are downloaded once, pinned to a version, and saved in `/public/assets/vendor/`. No CDN links. No trackers. No external fonts at runtime.
 5. Browser tools must never send file contents over the network. No `fetch` or `XMLHttpRequest` with user files outside the three sharing tools.
 6. The design must NOT look AI-generated or like a template. Follow the "Never do this" list in `02-DESIGN-SYSTEM.md` strictly.
 7. Build the smallest working version first (one input, one button, one download). Add options only when asked.
