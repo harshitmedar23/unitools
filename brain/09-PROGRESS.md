@@ -42,6 +42,7 @@
 - [x] Generate PDF page thumbnail contact sheets
 - [x] Crop PDF page edges
 - [x] Fill standard PDF text, checkbox, dropdown and radio fields
+- [x] Export selectable PDF text as Markdown
 ### Phase 3
 - [x] 16 Age calculator
 - [x] 17 Percentage calculator
@@ -72,3 +73,4 @@
 - DOCX, PPTX, EPUB and OCR conversions are not listed: no local browser libraries are vendored for reliable output.
 - HTML to PDF uses the browser print dialog and asks the user to choose Save as PDF; it does not claim to render HTML through pdf-lib.
 - The public PDF directory groups implemented operations and marks unsupported items as unavailable. OCR, PDF repair, PDF encryption/decryption, Word/PowerPoint/Excel conversion, PDF/A conversion, redaction, AI summaries and translation need additional engines or services and must not be advertised as working.
+- PDF page recovery stalled during local PDF.js rendering validation, and authorized password removal has no encrypted test fixture; both remain unlisted until independently verified.

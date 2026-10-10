@@ -3,7 +3,7 @@ import { initTheme } from "/assets/common.js";
 const categories = [
   { id: "organize", title: "Organize PDF", entries: [
     ["Merge PDF", "merge-pdf"], ["Split PDF", "split-pdf"], ["Remove pages", "pdf-pages"],
-    ["Extract pages", "pdf-pages"], ["Organize PDF", "pdf-pages"], ["Scan to PDF", "jpg-to-pdf"]
+    ["Extract pages", "pdf-pages"], ["Organize PDF", "pdf-pages"], ["Scan to PDF"]
   ] },
   { id: "optimize", title: "Optimize PDF", entries: [
     ["Compress PDF", "compress-pdf"], ["Repair PDF"], ["OCR PDF"]
@@ -14,7 +14,7 @@ const categories = [
   ] },
   { id: "convert-from", title: "Convert from PDF", entries: [
     ["PDF to JPG", "pdf-to-jpg"], ["PDF to Word"], ["PDF to PowerPoint"],
-    ["PDF to Excel"], ["PDF to PDF/A"], ["PDF to Markdown", "extract-pdf-text"]
+    ["PDF to Excel"], ["PDF to PDF/A"], ["PDF to Markdown", "pdf-to-markdown"]
   ] },
   { id: "edit", title: "Edit PDF", entries: [
     ["Rotate PDF", "rotate-pdf"], ["Add page numbers", "add-page-numbers"],

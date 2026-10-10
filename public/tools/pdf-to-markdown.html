@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF to Markdown online, free: UniTools</title>
+  <meta name="description" content="Extract selectable text from PDF pages into a Markdown file. Runs in your browser.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/pdf-to-markdown.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#pdf-tools">PDF tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page" data-pdf-tool>
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#pdf-tools">PDF</a> / PDF to Markdown</p>
+    <h1>Convert PDF text to Markdown</h1><p class="lede">Extract selectable text and separate it under page headings.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Files never leave your device.</p>
+    <section class="tool-panel" aria-label="PDF to Markdown tool">
+      <label class="drop-zone" data-dropzone><input class="sr-only" type="file" accept="application/pdf"><span class="drop-zone-title">Drop a PDF here</span><span class="button button-secondary">Choose file</span><small>PDF only. Up to 100 MB.</small></label>
+      <p data-page-count></p><div class="options-stack" data-options hidden></div>
+      <div class="actions"><button class="button button-primary" type="button" data-run disabled>Convert to Markdown</button><button class="link-button" type="button" data-reset hidden>Start over</button><p class="hint" data-run-hint>Choose a PDF to begin.</p></div>
+      <div data-progress hidden></div><div class="message" data-message role="status" aria-live="polite" hidden></div>
+      <div class="result-block" data-result hidden aria-live="polite"><p data-result-summary></p><a class="button button-primary" data-download download="converted.md">Download converted.md</a></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Choose a PDF with selectable text.</li><li>Text is extracted page by page.</li><li>Download the Markdown file.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>Does this OCR scanned pages?</h3><p>No. It extracts text already stored in the PDF. Scanned-page OCR is not available yet.</p><h3>Will the original layout be preserved?</h3><p>No. The output uses page headings and extracted text; columns, images and precise formatting are not retained.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/extract-pdf-text.html">Extract text from PDF</a></li><li><a href="/tools/markdown-to-pdf.html">Markdown to PDF</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p></div></footer>
+</body>
+</html>

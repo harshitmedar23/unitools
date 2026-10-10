@@ -107,6 +107,17 @@
     "url": "/tools/pdf-forms.html"
   },
   {
+    "id": "pdf-to-markdown",
+    "name": "PDF to Markdown",
+    "title": "PDF to Markdown online",
+    "description": "Extract selectable PDF text into Markdown pages.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["pdf markdown", "pdf to md", "extract pdf text markdown"],
+    "url": "/tools/pdf-to-markdown.html"
+  },
+  {
     "id": "pdf-metadata",
     "name": "Edit PDF metadata",
     "title": "Edit PDF metadata online",
@@ -116,28 +127,6 @@
     "runs": "browser",
     "keywords": ["pdf properties", "pdf metadata"],
     "url": "/tools/pdf-metadata.html"
-  },
-  {
-    "id": "compare-pdf",
-    "name": "Compare two PDFs",
-    "title": "Compare two PDFs online",
-    "description": "Compare page counts and extractable text.",
-    "category": "PDF",
-    "phase": 2,
-    "runs": "browser",
-    "keywords": ["compare pdf", "pdf diff"],
-    "url": "/tools/compare-pdf.html"
-  },
-  {
-    "id": "extract-pdf-text",
-    "name": "Extract text from PDF",
-    "title": "Extract text from PDF online",
-    "description": "Save selectable PDF text as a text file.",
-    "category": "PDF",
-    "phase": 2,
-    "runs": "browser",
-    "keywords": ["pdf to text", "extract pdf text"],
-    "url": "/tools/extract-pdf-text.html"
   },
   {
     "id": "extract-pdf-images",
