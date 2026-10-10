@@ -132,6 +132,44 @@ button { cursor: pointer; }
 .message-ok { color: var(--ok); }
 .result-block { padding: var(--s4); border: var(--border); border-radius: var(--radius-lg); background: var(--surface); }
 .result-block p { margin: 0 0 var(--s4); }
+.options-stack { display: grid; gap: var(--s4); margin-top: var(--s4); }
+.range { width: 100%; accent-color: var(--accent); }
+.check-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); margin-top: var(--s3); }
+.check-line { display: block; margin-top: var(--s3); }
+.stat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s3); margin-top: var(--s4); }
+.stat-grid div { display: grid; gap: var(--s1); padding: var(--s3); border: var(--border); }
+.stat-grid strong { font-family: var(--font-mono); font-size: var(--text-lg); }
+.stat-grid span { color: var(--ink-soft); font-size: var(--text-sm); }
+.text-area { display: block; height: auto; min-height: 240px; padding-block: var(--s3); resize: vertical; }
+.tabs { display: flex; gap: var(--s5); margin-bottom: var(--s5); border-bottom: var(--border); }
+.tab { min-height: 44px; padding: 0 0 var(--s2); border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--ink-soft); }
+.tab.is-active { border-bottom-color: var(--accent); color: var(--ink); }
+.generated-output { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s3); align-items: end; margin-top: var(--s5); }
+.generated-output .field-label { grid-column: 1 / -1; margin: 0; }
+.generated-input { min-width: 0; font-family: var(--font-mono); }
+.entropy { margin: var(--s3) 0 0; color: var(--ink-soft); font-family: var(--font-mono); font-size: var(--text-sm); }
+.form-grid { display: grid; gap: var(--s4); }
+.form-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.field-group { min-width: 0; }
+.result-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); margin-top: var(--s4); }
+.result-grid div { display: grid; gap: var(--s1); padding: var(--s3); border: var(--border); }
+.result-grid strong { font-family: var(--font-mono); font-size: var(--text-lg); overflow-wrap: anywhere; }
+.result-grid span { color: var(--ink-soft); font-size: var(--text-sm); }
+.working { margin: var(--s4) 0 0; padding: var(--s3); border-left: 3px solid var(--accent); background: var(--paper); font-family: var(--font-mono); font-size: var(--text-sm); white-space: pre-wrap; overflow-wrap: anywhere; }
+.working:empty { display: none; }
+.table-wrap { overflow-x: auto; margin-top: var(--s4); }
+.data-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.data-table th, .data-table td { padding: var(--s2); border-bottom: var(--border); text-align: left; white-space: nowrap; }
+.data-table th { font-weight: 700; }
+.meter { height: 12px; margin-top: var(--s4); background: var(--line); }
+.meter span { display: block; height: 100%; background: var(--accent); }
+.inline-fields { display: flex; flex-wrap: wrap; gap: var(--s3); align-items: end; }
+.inline-fields .field-group { flex: 1 1 140px; }
+.button-row { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s3); }
+.button-small { min-height: 36px; padding: 0 var(--s3); }
+details { margin-top: var(--s4); }
+summary { cursor: pointer; font-weight: 500; }
+code, .mono { font-family: var(--font-mono); }
 
 .tool-page { width: min(calc(100% - (var(--s4) * 2)), var(--page-w)); margin-inline: auto; padding-block: var(--s5) var(--s8); }
 .breadcrumb { margin: 0 0 var(--s5); color: var(--ink-soft); font-size: var(--text-sm); }
@@ -162,6 +200,9 @@ button { cursor: pointer; }
   .drop-zone-title, .drop-zone-hint { display: none; }
   .file-row-details { font-size: 11px; }
   .file-row-action, .file-row-remove { min-width: 44px; }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .generated-output { grid-template-columns: 1fr; }
+  .form-grid-two, .result-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (prefers-reduced-motion: no-preference) { .progress-bar { transition: transform 120ms; } }

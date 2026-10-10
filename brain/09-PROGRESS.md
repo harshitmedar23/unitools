@@ -9,35 +9,35 @@
 - [ ] 5 Polish (privacy, sitemap, _headers, titles)
 - [ ] 6 Sharing backend
 - [ ] 7 Phase 2 tools
-- [ ] 8 Phase 3 tools
+- [x] 8 Phase 3 tools
 
 ## Tools (tick when it passes brain/07)
 ### Phase 1
 - [x] 1 Merge PDF
-- [ ] 2 Split PDF
-- [ ] 3 JPG to PDF
-- [ ] 4 PDF to JPG
-- [ ] 5 Compress image
-- [ ] 6 Resize image
-- [ ] 7 QR code generator
-- [ ] 8 Clean AI code
+- [x] 2 Split PDF
+- [x] 3 JPG to PDF
+- [x] 4 PDF to JPG
+- [x] 5 Compress image
+- [x] 6 Resize image
+- [x] 7 QR code generator
+- [x] 8 Clean AI code
 ### Phase 2
 - [ ] 9 Quick share
 - [ ] 10 Link share
 - [ ] 11 Receive file
-- [ ] 12 Compress PDF
-- [ ] 13 Image converter
-- [ ] 14 Word and character counter
-- [ ] 15 Password generator
+- [x] 12 Compress PDF
+- [x] 13 Image converter
+- [x] 14 Word and character counter
+- [x] 15 Password generator
 ### Phase 3
-- [ ] 16 Age calculator
-- [ ] 17 Percentage calculator
-- [ ] 18 EMI calculator
-- [ ] 19 GST calculator
-- [ ] 20 CGPA / SGPA calculator
-- [ ] 21 Attendance calculator
-- [ ] 22 JSON formatter
-- [ ] 23 Base64 encode / decode
+- [x] 16 Age calculator
+- [x] 17 Percentage calculator
+- [x] 18 EMI calculator
+- [x] 19 GST calculator
+- [x] 20 CGPA / SGPA calculator
+- [x] 21 Attendance calculator
+- [x] 22 JSON formatter
+- [x] 23 Base64 encode / decode
 
 ## Open decisions and notes
 (Add anything undecided or learned here, one line each.)

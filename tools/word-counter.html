@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word and character counter online, free: UniTools</title>
+  <meta name="description" content="Count words, characters, sentences and paragraphs. See reading and speaking time in your browser.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/word-counter.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#tools">Search tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">Text and Code</a> / Word counter</p>
+    <h1>Word and character counter</h1>
+    <p class="lede">Count words, characters, sentences and paragraphs as you type.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Files never leave your device.</p>
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">Word and character counter</h2>
+      <label class="field-label" for="text">Text to count</label><textarea class="input text-area" id="text" data-text rows="12" spellcheck="true"></textarea>
+      <div class="stat-grid" data-stats aria-live="polite"><div><strong data-words>0</strong><span>Words</span></div><div><strong data-characters>0</strong><span>Characters</span></div><div><strong data-no-spaces>0</strong><span>Without spaces</span></div><div><strong data-sentences>0</strong><span>Sentences</span></div><div><strong data-paragraphs>0</strong><span>Paragraphs</span></div><div><strong data-reading>0 min</strong><span>Reading time</span></div><div><strong data-speaking>0 min</strong><span>Speaking time</span></div></div>
+      <div class="actions"><button class="link-button" type="button" data-reset>Start over</button><p class="hint">Reading time uses 200 words per minute. Speaking time uses 130.</p></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Paste or type your text.</li><li>The counts update immediately.</li><li>Use the times as a rough guide.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>Does it count non-English words?</h3><p>Yes. It uses the browser's <code>Intl.Segmenter</code> when available, with a Unicode-aware fallback.</p><h3>Are spaces included in characters?</h3><p>Both character counts are shown, so you can use the one your form or editor requires.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/clean-ai-code.html">Clean AI code</a></li><li><a href="/tools/password-generator.html">Password generator</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share a file with a private link online, free: UniTools</title>
+  <meta name="description" content="Share an encrypted file with a private link that expires in 10 minutes, 1 hour or 24 hours.">
+  <meta name="share-api" content="/api">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/link-share.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#tools">Search tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">Share</a> / Link share</p>
+    <h1>Share a file with a private link</h1>
+    <p class="lede">Create an encrypted link for someone far away or for several people.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Encrypted and auto-deleted. Not permanent storage.</p>
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">Link share</h2>
+      <label class="drop-zone" data-dropzone><input type="file" class="sr-only" data-file><span class="dropzone-title">Drop one file here</span><span class="button button-secondary">Choose file</span><small>Any file up to 50 MB.</small></label>
+      <p class="hint" data-file-name></p>
+      <div class="options-stack">
+        <div class="form-grid form-grid-two"><div class="field-group"><label class="field-label" for="expiry">Expiry</label><select class="select" id="expiry" data-expiry><option value="10">10 minutes</option><option value="60">1 hour</option><option value="1440">24 hours</option></select></div><div class="field-group"><label class="field-label" for="download-limit">Downloads</label><select class="select" id="download-limit" data-download-limit><option value="none">No limit</option><option value="1">Delete after 1 download</option></select></div></div>
+        <label class="check-line"><input type="checkbox" data-password-toggle> Protect with a password</label>
+        <div data-password-fields hidden><label class="field-label" for="link-password">Password</label><input class="input" id="link-password" data-password type="password" autocomplete="new-password" minlength="8"><p class="hint">The password is never sent to the server. Share it separately.</p></div>
+      </div>
+      <div class="actions"><button class="button button-primary" type="button" data-upload disabled>Create private link</button><button class="link-button" type="button" data-reset hidden>Start over</button><p class="hint" data-hint>Choose a file to begin.</p></div>
+      <div class="progress" data-progress hidden></div><div class="message message-error" data-message role="alert" hidden></div>
+      <div class="result-block" data-result hidden aria-live="polite"><p>Your encrypted link is ready.</p><label class="field-label" for="share-link">Private link</label><input class="input" id="share-link" data-link readonly><div class="result-grid"><div><strong class="mono" data-countdown></strong><span>Time left</span></div><div><strong class="mono" data-link-id></strong><span>Share ID</span></div></div><div class="button-row"><button class="button button-secondary" type="button" data-copy>Copy link</button><button class="button button-secondary" type="button" data-qr>Show QR</button><button class="button button-quiet" type="button" data-delete>Delete file</button></div><div data-qr-preview hidden></div><p class="hint">The decryption key is in the link after the <code>#</code>. It is not sent to the server.</p></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Choose a file and expiry.</li><li>Your browser encrypts it before upload.</li><li>Share the link. It expires automatically.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>Can the server read my file?</h3><p>The decryption key stays in the link fragment, which browsers do not send in requests. The Worker stores ciphertext only.</p><h3>Can I delete the link early?</h3><p>Yes. Keep the delete token returned when the link is created in this page.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/quick-share.html">Quick share</a></li><li><a href="/tools/receive-file.html">Receive file</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p><a href="/privacy.html">Privacy and acceptable use</a> <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p></div></footer>
+</body>
+</html>

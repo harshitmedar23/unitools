@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convert JPG, PNG and WebP online, free: UniTools</title>
+  <meta name="description" content="Convert JPG, PNG and WebP images in your browser. Multiple images can be downloaded as one ZIP.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/image-converter.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#tools">Search tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">Image</a> / Image converter</p>
+    <h1>Convert JPG, PNG and WebP</h1>
+    <p class="lede">Switch image formats on your device. Several images become one ZIP.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Files never leave your device.</p>
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">Image converter</h2>
+      <label class="drop-zone" data-dropzone><input class="sr-only" type="file" accept="image/jpeg,image/png,image/webp" multiple><span class="drop-zone-title">Drop images here</span><span class="button button-secondary">Choose files</span><small class="drop-zone-hint">JPG, PNG or WebP. Up to 25 MB per file.</small></label>
+      <ul class="file-list simple-file-list" data-file-list hidden></ul>
+      <div class="options-stack" data-options hidden><div><label class="field-label" for="format">Convert to</label><select class="select" id="format" data-format><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WebP</option></select></div><div data-quality-wrap><label class="field-label" for="quality">Quality <output data-quality-value>85%</output></label><input class="range" id="quality" data-quality type="range" min="40" max="100" step="5" value="85"></div></div>
+      <div class="actions"><button class="button button-primary" type="button" data-run disabled>Convert images</button><button class="link-button" type="button" data-reset hidden>Start over</button><p class="hint" data-run-hint>Choose one or more images first.</p></div>
+      <div data-progress hidden></div><div class="message" data-message role="alert" hidden></div>
+      <div class="result-block" data-result hidden><p data-result-summary></p><div class="actions" data-downloads></div></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Add one or more images.</li><li>Choose the format and quality.</li><li>Download the converted file or ZIP.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>What happens to transparent PNG pixels?</h3><p>When converting to JPG, transparent areas are filled with white because JPG has no transparency.</p><h3>Can every browser create WebP?</h3><p>The tool checks your browser before converting and explains when WebP output is unavailable.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/compress-image.html">Compress image</a></li><li><a href="/tools/resize-image.html">Resize image</a></li><li><a href="/tools/jpg-to-pdf.html">JPG to PDF</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p></div></footer>
+</body>
+</html>

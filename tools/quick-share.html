@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Send a file with a 5-digit code online, free: UniTools</title>
+  <meta name="description" content="Send a file with a 5-digit code. It is encrypted and automatically deleted after 10 minutes.">
+  <meta name="share-api" content="/api">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/quick-share.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#tools">Search tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">Share</a> / Quick share</p>
+    <h1>Send a file with a 5-digit code</h1>
+    <p class="lede">Share one file with someone nearby. The code works for 10 minutes.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Encrypted and auto-deleted. Not permanent storage.</p>
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">Quick share</h2>
+      <label class="drop-zone" data-dropzone><input type="file" class="sr-only" data-file><span class="dropzone-title">Drop one file here</span><span class="button button-secondary">Choose file</span><small>Any file up to 50 MB.</small></label>
+      <p class="hint" data-file-name></p>
+      <div class="options-stack">
+        <label class="check-line"><input type="checkbox" data-password-toggle> Protect with a password</label>
+        <div data-password-fields hidden><label class="field-label" for="quick-password">Password</label><input class="input" id="quick-password" data-password type="password" autocomplete="new-password" minlength="8"><p class="hint">The password is never sent to the server. Share it separately.</p></div>
+      </div>
+      <div class="actions"><button class="button button-primary" type="button" data-upload disabled>Upload file</button><button class="link-button" type="button" data-reset hidden>Start over</button><p class="hint" data-hint>Choose a file to begin.</p></div>
+      <div class="progress" data-progress hidden></div>
+      <div class="message message-error" data-message role="alert" hidden></div>
+      <div class="result-block" data-result hidden aria-live="polite"><p>Give this 5-digit code to the receiver.</p><div class="result-grid"><div><strong class="mono" data-code></strong><span>Code</span></div><div><strong class="mono" data-countdown></strong><span>Time left</span></div></div><div class="button-row"><button class="button button-secondary" type="button" data-copy>Copy code</button></div><p class="hint">Protected by the code. Deleted after 10 minutes.</p></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Choose a file up to 50 MB.</li><li>Upload it and share the 5-digit code.</li><li>The receiver enters the code and downloads it.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>Is quick share permanent storage?</h3><p>No. The file is deleted after 10 minutes, and you should not use it as storage.</p><h3>What does a password protect?</h3><p>With a password, the file is encrypted in your browser before upload. Share the password separately.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/link-share.html">Link share</a></li><li><a href="/tools/receive-file.html">Receive file</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p><a href="/privacy.html">Privacy and acceptable use</a> <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p></div></footer>
+</body>
+</html>

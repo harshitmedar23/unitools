@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compress PDF online, free: UniTools</title>
+  <meta name="description" content="Make a PDF smaller in your browser. Choose light compression to keep text selectable or strong compression to rebuild pages as images.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/compress-pdf.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#tools">Search tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">PDF</a> / Compress PDF</p>
+    <h1>Compress PDF files</h1>
+    <p class="lede">Make a PDF smaller without sending it anywhere.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Files never leave your device.</p>
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">Compress PDF tool</h2>
+      <label class="drop-zone" data-dropzone><input class="sr-only" type="file" accept="application/pdf,.pdf"><span class="drop-zone-title">Drop a PDF here</span><span class="button button-secondary">Choose files</span><small class="drop-zone-hint">PDF only. Up to 100 MB.</small></label>
+      <div class="options-stack" data-options hidden>
+        <div><label class="field-label" for="mode">Compression mode</label><select class="select" id="mode" data-mode><option value="light">Light: keep selectable text</option><option value="strong">Strong: rebuild pages as images</option></select></div>
+        <div data-strong-options hidden><label class="field-label" for="quality">Image quality <output data-quality-value>70%</output></label><input class="range" id="quality" data-quality type="range" min="40" max="90" step="5" value="70"><p class="hint">Strong compression makes text unselectable.</p></div>
+        <p class="hint" data-page-count></p>
+      </div>
+      <div class="actions"><button class="button button-primary" type="button" data-run disabled>Compress PDF</button><button class="link-button" type="button" data-reset hidden>Start over</button><p class="hint" data-run-hint>Choose a PDF first.</p></div>
+      <div data-progress hidden></div><div class="message" data-message role="alert" hidden></div>
+      <div class="result-block" data-result hidden><p data-result-summary></p><a class="button button-primary" data-download download="compressed.pdf">Download compressed.pdf</a></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Add one PDF.</li><li>Choose light or strong compression.</li><li>Download the smaller file.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>What is strong compression?</h3><p>Each page is rendered as a JPEG image and rebuilt into a PDF. Text can no longer be selected.</p><h3>Will every PDF become smaller?</h3><p>No. If the result is not smaller, the original file is returned.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/pdf-to-jpg.html">PDF to JPG</a></li><li><a href="/tools/split-pdf.html">Split PDF</a></li><li><a href="/tools/merge-pdf.html">Merge PDF</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p></div></footer>
+</body>
+</html>

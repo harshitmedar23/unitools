@@ -139,6 +139,26 @@ export function renderFileList(listElement, items, { onRemove, onMove } = {}) {
 export function saveSetting(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* storage is optional */ } }
 export function loadSetting(key) { try { return JSON.parse(localStorage.getItem(key)); } catch { return null; } }
 
+export function getShareApiBase() {
+  return document.querySelector('meta[name="share-api"]')?.content || "/api";
+}
+
+export function bytesToBase64Url(bytes) {
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/\+/gu, "-").replace(/\//gu, "_").replace(/=+$/u, "");
+}
+
+export function base64UrlToBytes(value) {
+  const normalized = value.replace(/-/gu, "+").replace(/_/gu, "/");
+  const binary = atob(normalized + "=".repeat((4 - normalized.length % 4) % 4));
+  return Uint8Array.from(binary, (character) => character.charCodeAt(0));
+}
+
+export async function copyText(value) {
+  await navigator.clipboard.writeText(value);
+}
+
 export function initTheme() {
   const saved = loadSetting("unitools-theme");
   if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
