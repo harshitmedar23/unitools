@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XLSX to CSV online, free: UniTools</title>
+  <meta name="description" content="Convert the first worksheet in an XLSX spreadsheet to CSV in your browser. Nothing is uploaded.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/xlsx-to-csv.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="page-width header-inner"><a class="wordmark" href="/">UniTools</a><nav class="header-actions" aria-label="Site controls"><a class="quiet-link" href="/#tools">Search tools</a><button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg></button></nav></div></header>
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">Text and Code</a> / XLSX to CSV</p>
+    <h1>XLSX to CSV</h1>
+    <p class="lede">Convert the first worksheet in an XLSX spreadsheet to CSV in your browser.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Files never leave your device.</p>
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">XLSX to CSV</h2>
+      <label class="drop-zone" data-dropzone><input class="sr-only" type="file" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" data-file-input><span>Drop an XLSX file here or <span class="button button-secondary">Choose file</span></span><small data-filename>No file chosen</small></label>
+      <div class="actions"><button class="button button-primary" type="button" data-run disabled>Convert to CSV</button><button class="link-button" type="button" data-reset hidden>Start over</button><p class="hint" data-run-hint>Choose one XLSX file first.</p></div>
+      <div data-progress hidden></div><div class="message message-error" data-message role="alert" hidden></div>
+      <div class="result-block" data-result hidden aria-live="polite"><p data-result-summary></p><div class="table-wrap" data-preview></div><a class="button button-primary" data-download download="data.csv">Download data.csv</a></div>
+    </section>
+    <section class="how"><h2>How it works</h2><ol><li>Choose an XLSX or XLS file.</li><li>Check the first worksheet preview.</li><li>Download the CSV file.</li></ol></section>
+    <section class="faq"><h2>Questions</h2><h3>Is my file uploaded anywhere?</h3><p>No. The conversion happens inside your browser.</p><h3>Which worksheet is converted?</h3><p>Only the first worksheet is converted to CSV.</p></section>
+    <section class="related"><h2>Related tools</h2><ul><li><a href="/tools/csv-to-xlsx.html">CSV to XLSX</a></li><li><a href="/tools/csv-to-json.html">CSV to JSON</a></li><li><a href="/tools/json-to-csv.html">JSON to CSV</a></li></ul></section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-inner"><p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by [your name]</p></div></footer>
+</body>
+</html>

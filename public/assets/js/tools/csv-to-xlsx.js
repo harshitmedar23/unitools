@@ -1,0 +1,27 @@
+import { clearMessage, initDropzone, initTheme, loadScript, showError, showProgress } from "/assets/common.js";
+
+const xlsxScript = "/assets/vendor/xlsx-0.18.5.full.min.js";
+
+function getElements() { return { dropzone: document.querySelector("[data-dropzone]"), fileInput: document.querySelector("[data-file-input]"), filename: document.querySelector("[data-filename]"), run: document.querySelector("[data-run]"), hint: document.querySelector("[data-run-hint]"), reset: document.querySelector("[data-reset]"), progress: document.querySelector("[data-progress]"), message: document.querySelector("[data-message]"), result: document.querySelector("[data-result]"), summary: document.querySelector("[data-result-summary]"), preview: document.querySelector("[data-preview]"), download: document.querySelector("[data-download]") }; }
+
+function showPreview(container, rows) {
+  container.replaceChildren(); const table = document.createElement("table"); table.className = "data-table"; const body = rows.slice(0, 21); const columns = Math.min(12, Math.max(...body.map((row) => row.length), 1)); const head = document.createElement("thead"); const headRow = document.createElement("tr");
+  for (let index = 0; index < columns; index += 1) { const cell = document.createElement("th"); cell.scope = "col"; cell.textContent = body[0][index] ?? ""; headRow.append(cell); } head.append(headRow); table.append(head);
+  const tbody = document.createElement("tbody"); body.slice(1).forEach((row) => { const tr = document.createElement("tr"); for (let index = 0; index < columns; index += 1) { const cell = document.createElement("td"); cell.textContent = row[index] ?? ""; tr.append(cell); } tbody.append(tr); }); table.append(tbody); container.append(table);
+}
+
+function csvRows(value) {
+  const rows = []; let row = []; let cell = ""; let quoted = false;
+  for (let index = 0; index < value.length; index += 1) { const character = value[index]; if (character === '"' && quoted && value[index + 1] === '"') { cell += '"'; index += 1; continue; } if (character === '"') { quoted = !quoted; continue; } if (character === "," && !quoted) { row.push(cell); cell = ""; continue; } if ((character === "\n" || character === "\r") && !quoted) { if (character === "\r" && value[index + 1] === "\n") index += 1; row.push(cell); if (row.some((item) => item.trim())) rows.push(row); row = []; cell = ""; continue; } cell += character; }
+  if (cell || row.length) { row.push(cell); if (row.some((item) => item.trim())) rows.push(row); } if (quoted) throw new Error("This CSV has an unclosed quoted value."); if (!rows.length) throw new Error("The CSV file is empty."); return rows;
+}
+
+function setResult(c, blob, rows) { const url = URL.createObjectURL(blob); c.download.href = url; c.download.download = "data.xlsx"; c.summary.textContent = `Done. ${rows.length - 1} data row${rows.length - 1 === 1 ? "" : "s"} in data.xlsx.`; showPreview(c.preview, rows); c.result.hidden = false; c.reset.hidden = false; return url; }
+
+initTheme(); const c = getElements(); let file = null; let outputUrl = ""; let working = false;
+function reset() { file = null; c.fileInput.value = ""; c.filename.textContent = "No file chosen"; c.run.disabled = true; c.hint.textContent = "Choose one CSV file first."; c.reset.hidden = true; c.result.hidden = true; c.progress.hidden = true; c.preview.replaceChildren(); clearMessage(c.message); if (outputUrl) URL.revokeObjectURL(outputUrl); outputUrl = ""; }
+
+async function convert() { if (!file || working) return; working = true; c.run.disabled = true; c.result.hidden = true; clearMessage(c.message); showProgress(c.progress, "Reading CSV locally", 0.2); try { await loadScript(xlsxScript); const rows = csvRows(await file.text()); showProgress(c.progress, "Creating XLSX workbook", 0.65); await new Promise((resolve) => setTimeout(resolve, 0)); const sheet = window.XLSX.utils.aoa_to_sheet(rows); const workbook = window.XLSX.utils.book_new(); window.XLSX.utils.book_append_sheet(workbook, sheet, "Sheet1"); const bytes = window.XLSX.write(workbook, { bookType: "xlsx", type: "array" }); if (outputUrl) URL.revokeObjectURL(outputUrl); outputUrl = setResult(c, new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }), rows); c.progress.hidden = true; } catch (error) { c.progress.hidden = true; showError(c.message, error.message || "Could not convert this CSV. Check the file and try again."); } working = false; c.run.disabled = !file; c.reset.hidden = !file && c.result.hidden; }
+
+initDropzone(c.dropzone, { accept: (candidate) => /(^|\.)csv$/iu.test(candidate.name) || candidate.type === "text/csv", maxSizeMB: 50, onError: (message) => showError(c.message, message), onFiles: async (selected) => { file = selected[0]; c.filename.textContent = `${file.name} (${file.size.toLocaleString("en-IN")} bytes)`; c.run.disabled = false; c.hint.textContent = "Ready to convert locally."; c.reset.hidden = false; clearMessage(c.message); showProgress(c.progress, "Preparing local spreadsheet tools", 0.05); try { await loadScript(xlsxScript); c.progress.hidden = true; } catch (error) { c.progress.hidden = true; showError(c.message, "The local spreadsheet library could not load. Check that the vendored file is available."); c.run.disabled = true; } } });
+c.run.addEventListener("click", convert); c.reset.addEventListener("click", reset);

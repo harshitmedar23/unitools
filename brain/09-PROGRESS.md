@@ -29,6 +29,17 @@
 - [x] 13 Image converter
 - [x] 14 Word and character counter
 - [x] 15 Password generator
+- [x] Rotate PDF pages
+- [x] Reorder, extract or delete PDF pages
+- [x] Add page numbers to PDF
+- [x] Add watermarks to PDF
+- [x] Add PDF headers and footers
+- [x] Edit PDF metadata
+- [x] Compare two PDFs by page count and extractable text
+- [x] Extract text from PDFs
+- [x] Extract embedded images from PDFs
+- [x] Add signature images to PDFs
+- [x] Generate PDF page thumbnail contact sheets
 ### Phase 3
 - [x] 16 Age calculator
 - [x] 17 Percentage calculator
@@ -38,7 +49,23 @@
 - [x] 21 Attendance calculator
 - [x] 22 JSON formatter
 - [x] 23 Base64 encode / decode
+### Phase 4 (local conversions)
+- [x] TXT to PDF
+- [x] HTML to PDF (browser print / Save as PDF)
+- [x] Markdown to HTML
+- [x] Markdown to PDF
+- [x] JSON to CSV
+- [x] CSV to JSON
+- [x] XML to JSON
+- [x] JSON to XML
+- [x] Batch conversion for TXT, Markdown, JSON, CSV and XML
+- [x] CSV to XLSX
+- [x] XLSX to CSV (first worksheet)
 
 ## Open decisions and notes
 (Add anything undecided or learned here, one line each.)
 - Sharing tools are hidden from public/assets/tools.json until the Worker has real R2/KV bindings and passes deployed API tests.
+- Password-protect PDF is not listed: the vendored pdf-lib version can read and rewrite PDFs but cannot create encrypted output safely in the browser.
+- CSV to XLSX and XLSX to CSV use the locally vendored SheetJS 0.18.5 build and convert only in the browser.
+- DOCX, PPTX, EPUB and OCR conversions are not listed: no local browser libraries are vendored for reliable output.
+- HTML to PDF uses the browser print dialog and asks the user to choose Save as PDF; it does not claim to render HTML through pdf-lib.

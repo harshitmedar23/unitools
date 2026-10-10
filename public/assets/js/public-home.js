@@ -6,9 +6,31 @@ const fileToolIds = [
   "compress-pdf",
   "jpg-to-pdf",
   "pdf-to-jpg",
+  "rotate-pdf",
+  "pdf-pages",
+  "add-page-numbers",
+  "watermark-pdf",
+  "headers-footers-pdf",
+  "pdf-metadata",
+  "compare-pdf",
+  "extract-pdf-text",
+  "extract-pdf-images",
+  "sign-pdf",
+  "pdf-thumbnails",
   "compress-image",
   "resize-image",
-  "image-converter"
+  "image-converter",
+  "txt-to-pdf",
+  "html-to-pdf",
+  "markdown-to-html",
+  "markdown-to-pdf",
+  "json-to-csv",
+  "csv-to-json",
+  "csv-to-xlsx",
+  "xlsx-to-csv",
+  "xml-to-json",
+  "json-to-xml",
+  "batch-converter"
 ];
 
 function makeToolCard(tool) {

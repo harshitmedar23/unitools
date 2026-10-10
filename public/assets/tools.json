@@ -30,6 +30,127 @@
     "url": "/tools/split-pdf.html"
   },
   {
+    "id": "rotate-pdf",
+    "name": "Rotate PDF pages",
+    "title": "Rotate PDF pages online, free",
+    "description": "Turn selected PDF pages and download a new file.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["rotate pdf", "turn pdf pages"],
+    "url": "/tools/rotate-pdf.html"
+  },
+  {
+    "id": "pdf-pages",
+    "name": "Reorder or extract PDF pages",
+    "title": "Reorder, extract or delete PDF pages online",
+    "description": "Choose an output order or remove selected pages.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["reorder pdf", "extract pdf pages", "delete pdf pages"],
+    "url": "/tools/pdf-pages.html"
+  },
+  {
+    "id": "add-page-numbers",
+    "name": "Add page numbers",
+    "title": "Add page numbers to PDF online",
+    "description": "Number every page in a PDF.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["number pdf", "pdf page numbers"],
+    "url": "/tools/add-page-numbers.html"
+  },
+  {
+    "id": "watermark-pdf",
+    "name": "Watermark PDF",
+    "title": "Add a watermark to PDF online",
+    "description": "Add transparent angled text to every page.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["watermark pdf", "stamp pdf"],
+    "url": "/tools/watermark-pdf.html"
+  },
+  {
+    "id": "headers-footers-pdf",
+    "name": "PDF headers and footers",
+    "title": "Add PDF headers and footers online",
+    "description": "Add text at the top or bottom of every page.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["pdf header", "pdf footer"],
+    "url": "/tools/headers-footers-pdf.html"
+  },
+  {
+    "id": "pdf-metadata",
+    "name": "Edit PDF metadata",
+    "title": "Edit PDF metadata online",
+    "description": "Change title, author, subject and keywords.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["pdf properties", "pdf metadata"],
+    "url": "/tools/pdf-metadata.html"
+  },
+  {
+    "id": "compare-pdf",
+    "name": "Compare two PDFs",
+    "title": "Compare two PDFs online",
+    "description": "Compare page counts and extractable text.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["compare pdf", "pdf diff"],
+    "url": "/tools/compare-pdf.html"
+  },
+  {
+    "id": "extract-pdf-text",
+    "name": "Extract text from PDF",
+    "title": "Extract text from PDF online",
+    "description": "Save selectable PDF text as a text file.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["pdf to text", "extract pdf text"],
+    "url": "/tools/extract-pdf-text.html"
+  },
+  {
+    "id": "extract-pdf-images",
+    "name": "Extract images from PDF",
+    "title": "Extract images from PDF online",
+    "description": "Save embedded raster images as a ZIP.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["extract pdf images", "pdf images"],
+    "url": "/tools/extract-pdf-images.html"
+  },
+  {
+    "id": "sign-pdf",
+    "name": "Sign PDF with an image",
+    "title": "Sign PDF with an image online",
+    "description": "Place a PNG or JPG signature on a PDF page.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["sign pdf", "signature pdf"],
+    "url": "/tools/sign-pdf.html"
+  },
+  {
+    "id": "pdf-thumbnails",
+    "name": "PDF page thumbnails",
+    "title": "Make PDF page thumbnails online",
+    "description": "Create a JPG contact sheet of PDF pages.",
+    "category": "PDF",
+    "phase": 2,
+    "runs": "browser",
+    "keywords": ["pdf thumbnails", "pdf contact sheet"],
+    "url": "/tools/pdf-thumbnails.html"
+  },
+  {
     "id": "jpg-to-pdf",
     "name": "JPG to PDF",
     "title": "JPG to PDF online, free",
@@ -299,5 +420,126 @@
       "base64 decode"
     ],
     "url": "/tools/base64.html"
+  },
+  {
+    "id": "txt-to-pdf",
+    "name": "TXT to PDF",
+    "title": "TXT to PDF online, free",
+    "description": "Turn plain text into a readable PDF.",
+    "category": "PDF",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["text to pdf", "txt pdf", "convert txt"],
+    "url": "/tools/txt-to-pdf.html"
+  },
+  {
+    "id": "html-to-pdf",
+    "name": "HTML to PDF",
+    "title": "HTML to PDF online, free",
+    "description": "Print local HTML and save it as PDF.",
+    "category": "PDF",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["html pdf", "print html", "web page pdf"],
+    "url": "/tools/html-to-pdf.html"
+  },
+  {
+    "id": "markdown-to-html",
+    "name": "Markdown to HTML",
+    "title": "Markdown to HTML online, free",
+    "description": "Convert Markdown into a local HTML file.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["markdown html", "md html"],
+    "url": "/tools/markdown-to-html.html"
+  },
+  {
+    "id": "markdown-to-pdf",
+    "name": "Markdown to PDF",
+    "title": "Markdown to PDF online, free",
+    "description": "Turn Markdown text into a readable PDF.",
+    "category": "PDF",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["markdown pdf", "md pdf"],
+    "url": "/tools/markdown-to-pdf.html"
+  },
+  {
+    "id": "json-to-csv",
+    "name": "JSON to CSV",
+    "title": "JSON to CSV online, free",
+    "description": "Convert an array of JSON objects to CSV.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["json csv", "convert json"],
+    "url": "/tools/json-to-csv.html"
+  },
+  {
+    "id": "csv-to-json",
+    "name": "CSV to JSON",
+    "title": "CSV to JSON online, free",
+    "description": "Convert CSV rows into a JSON array.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["csv json", "convert csv"],
+    "url": "/tools/csv-to-json.html"
+  },
+  {
+    "id": "csv-to-xlsx",
+    "name": "CSV to XLSX",
+    "title": "CSV to XLSX online, free",
+    "description": "Convert CSV rows into an XLSX spreadsheet.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["csv xlsx", "csv excel", "convert csv to spreadsheet"],
+    "url": "/tools/csv-to-xlsx.html"
+  },
+  {
+    "id": "xlsx-to-csv",
+    "name": "XLSX to CSV",
+    "title": "XLSX to CSV online, free",
+    "description": "Convert the first worksheet into CSV.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["xlsx csv", "excel csv", "convert spreadsheet"],
+    "url": "/tools/xlsx-to-csv.html"
+  },
+  {
+    "id": "xml-to-json",
+    "name": "XML to JSON",
+    "title": "XML to JSON online, free",
+    "description": "Convert XML elements and attributes to JSON.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["xml json", "convert xml"],
+    "url": "/tools/xml-to-json.html"
+  },
+  {
+    "id": "json-to-xml",
+    "name": "JSON to XML",
+    "title": "JSON to XML online, free",
+    "description": "Convert JSON objects into XML.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["json xml", "convert json xml"],
+    "url": "/tools/json-to-xml.html"
+  },
+  {
+    "id": "batch-converter",
+    "name": "Batch converter",
+    "title": "Batch file converter online, free",
+    "description": "Convert supported text files together into one ZIP.",
+    "category": "Text and Code",
+    "phase": 4,
+    "runs": "browser",
+    "keywords": ["batch convert", "convert multiple files", "zip conversion"],
+    "url": "/tools/batch-converter.html"
   }
 ]
