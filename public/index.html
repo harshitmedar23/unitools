@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Free browser tools for files, images, text and numbers. Nothing is uploaded unless it says so.">
-  <title>Free online tools: UniTools</title>
+  <meta name="description" content="Free online PDF and image conversion tools. Compress, merge, split and convert files in your browser.">
+  <title>PDF and image tools online: UniTools</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
   <script type="module" src="/assets/common.js"></script>
-  <script type="module" src="/assets/js/home.js?v=2"></script>
+  <script type="module" src="/assets/js/public-home.js?v=1"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="page-width header-inner">
       <a class="wordmark" href="/">UniTools</a>
       <nav class="header-actions" aria-label="Site controls">
-        <a class="quiet-link" href="#tools">Search tools</a>
+        <a class="quiet-link" href="#file-tools">File tools</a>
         <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme">
           <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg>
         </button>
@@ -23,27 +23,33 @@
     </div>
   </header>
 
-  <main class="page-width home-main">
-    <h1 class="sr-only">UniTools</h1>
-    <p class="intro-line">Free tools for files, images, text and numbers. Nothing is uploaded unless it says so.</p>
+  <main class="page-width public-main">
+    <p class="public-kicker">PDF and image tools</p>
+    <h1>Convert and compress files in your browser.</h1>
+    <p class="public-intro">Merge, split, compress and convert PDFs and images without uploading your files.</p>
 
-    <section class="search-section" id="tools" aria-labelledby="search-heading">
-      <h2 class="sr-only" id="search-heading">Search tools</h2>
-      <label class="sr-only" for="tool-search">Search tools</label>
-      <div class="search-field">
-        <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#search"></use></svg>
-        <input id="tool-search" type="search" autocomplete="off" placeholder="Search tools" data-tool-search>
+    <section class="public-section" id="file-tools" aria-labelledby="file-tools-heading">
+      <div class="public-section-heading">
+        <h2 id="file-tools-heading">File conversions</h2>
+        <p>Common PDF and image jobs, ready when you need them.</p>
       </div>
-      <p class="search-status" data-search-status aria-live="polite"></p>
+      <div class="public-tool-grid" data-public-file-tools></div>
     </section>
 
-    <div class="tool-groups" data-tool-list></div>
-    <p class="empty-state" data-empty-state hidden>No tools match that search.</p>
+    <section class="public-section" aria-labelledby="privacy-heading">
+      <div class="public-note">
+        <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>
+        <div>
+          <h2 id="privacy-heading">Your files stay on your device.</h2>
+          <p>Browser tools process files locally. Nothing is uploaded unless a tool clearly says it uses a server.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="page-width footer-inner">
-      <p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p>
+      <p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> More browser tools are unlisted.</p>
     </div>
   </footer>
 </body>
