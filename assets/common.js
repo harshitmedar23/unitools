@@ -18,7 +18,7 @@ export function downloadBlob(blob, filename) {
   link.href = url;
   link.download = filename;
   link.click();
-  URL.revokeObjectURL(url);
+  setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
 export function showError(container, message) {
@@ -30,6 +30,12 @@ export function showError(container, message) {
 export function clearMessage(container) {
   container.textContent = "";
   container.hidden = true;
+}
+
+export function showWarning(container, message) {
+  container.className = "message message-warn";
+  container.textContent = `Warning: ${message}`;
+  container.hidden = false;
 }
 
 export function showProgress(container, label, fraction) {
@@ -59,14 +65,75 @@ export function initDropzone(element, options = {}) {
     const selected = Array.from(files);
     const maxBytes = (options.maxSizeMB || Infinity) * 1024 * 1024;
     if (!options.multiple && selected.length > 1) selected.splice(1);
+    if (options.accept && selected.some((file) => typeof options.accept === "function" ? !options.accept(file) : !file.type.match(options.accept))) return options.onError?.("That file type is not accepted. Choose a supported file.");
     if (selected.some((file) => file.size > maxBytes)) return options.onError?.("That file is too large. Choose a smaller one.");
-    if (options.accept && selected.some((file) => !file.type.match(options.accept))) return options.onError?.("That file type is not accepted. Choose a supported file.");
     options.onFiles?.(selected);
+    if (selected.reduce((total, file) => total + file.size, 0) > maxBytes) options.onSizeWarning?.();
   };
   input?.addEventListener("change", () => handleFiles(input.files));
   ["dragenter", "dragover"].forEach((eventName) => element.addEventListener(eventName, (event) => { event.preventDefault(); element.classList.add("is-dragover"); }));
   ["dragleave", "drop"].forEach((eventName) => element.addEventListener(eventName, (event) => { event.preventDefault(); element.classList.remove("is-dragover"); }));
   element.addEventListener("drop", (event) => handleFiles(event.dataTransfer.files));
+}
+
+export function renderFileList(listElement, items, { onRemove, onMove } = {}) {
+  listElement.replaceChildren();
+  items.forEach((item, index) => {
+    const row = document.createElement("li");
+    row.className = "file-row";
+    row.draggable = true;
+    row.dataset.index = String(index);
+
+    const handle = document.createElement("span");
+    handle.className = "file-row-handle";
+    handle.setAttribute("aria-hidden", "true");
+    handle.innerHTML = '<svg class="icon"><use href="/assets/icons.svg#grip"></use></svg>';
+
+    const name = document.createElement("span");
+    name.className = "file-row-name";
+    const extensionIndex = item.file.name.lastIndexOf(".");
+    const stem = document.createElement("span");
+    stem.className = "file-name-stem";
+    stem.textContent = extensionIndex > 0 ? item.file.name.slice(0, extensionIndex) : item.file.name;
+    const extension = document.createElement("span");
+    extension.className = "file-name-extension";
+    extension.textContent = extensionIndex > 0 ? item.file.name.slice(extensionIndex) : "";
+    name.append(stem, extension);
+
+    const details = document.createElement("span");
+    details.className = "file-row-details";
+    details.textContent = `${item.pages} ${item.pages === 1 ? "page" : "pages"} · ${formatBytes(item.file.size)}`;
+
+    const moveUp = document.createElement("button");
+    moveUp.className = "file-row-action";
+    moveUp.type = "button";
+    moveUp.setAttribute("aria-label", `Move ${item.file.name} up`);
+    moveUp.innerHTML = '<svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up"></use></svg>';
+    moveUp.disabled = index === 0;
+    moveUp.addEventListener("click", () => onMove?.(index, index - 1));
+
+    const moveDown = document.createElement("button");
+    moveDown.className = "file-row-action";
+    moveDown.type = "button";
+    moveDown.setAttribute("aria-label", `Move ${item.file.name} down`);
+    moveDown.innerHTML = '<svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-down"></use></svg>';
+    moveDown.disabled = index === items.length - 1;
+    moveDown.addEventListener("click", () => onMove?.(index, index + 1));
+
+    const remove = document.createElement("button");
+    remove.className = "file-row-remove";
+    remove.type = "button";
+    remove.setAttribute("aria-label", `Remove ${item.file.name}`);
+    remove.innerHTML = '<svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#x"></use></svg>';
+    remove.addEventListener("click", () => onRemove?.(index));
+
+    row.append(handle, name, details, moveUp, moveDown, remove);
+    row.addEventListener("dragstart", (event) => { event.dataTransfer.effectAllowed = "move"; event.dataTransfer.setData("text/plain", String(index)); });
+    row.addEventListener("dragover", (event) => event.preventDefault());
+    row.addEventListener("drop", (event) => { event.preventDefault(); onMove?.(Number(event.dataTransfer.getData("text/plain")), index); });
+    listElement.append(row);
+  });
+  listElement.hidden = items.length === 0;
 }
 
 export function saveSetting(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* storage is optional */ } }

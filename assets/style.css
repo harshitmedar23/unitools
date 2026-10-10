@@ -114,10 +114,14 @@ button { cursor: pointer; }
 .drop-zone p { margin: 0 0 var(--s3); }
 .drop-zone small { display: block; margin-top: var(--s2); color: var(--ink-soft); }
 .file-list { margin: var(--s4) 0; border-top: var(--border); }
-.file-row { display: flex; min-height: 44px; align-items: center; gap: var(--s3); border-bottom: var(--border); }
+.file-row { display: flex; min-height: 56px; align-items: center; gap: var(--s2); border-bottom: var(--border); }
 .file-row-name { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.file-row-size { color: var(--ink-soft); font-family: var(--font-mono); font-size: var(--text-sm); }
-.file-row-remove { min-width: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--ink-soft); }
+.file-name-stem { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-name-extension { flex: none; }
+.file-row-details { color: var(--ink-soft); font-family: var(--font-mono); font-size: 12px; white-space: nowrap; }
+.file-row-action, .file-row-remove { display: inline-grid; min-width: 44px; min-height: 44px; place-items: center; padding: 0; border: 0; border-radius: var(--radius); background: transparent; color: var(--ink-soft); }
+.file-row-action:disabled { cursor: default; opacity: 0.35; }
+.file-row-action:hover:not(:disabled), .file-row-remove:hover { color: var(--ink); }
 .file-row-handle { color: var(--ink-soft); }
 .progress { height: 4px; overflow: hidden; background: var(--line); }
 .progress-bar { height: 100%; background: var(--accent); transform-origin: left; }
@@ -129,8 +133,25 @@ button { cursor: pointer; }
 .result-block { padding: var(--s4); border: var(--border); border-radius: var(--radius-lg); background: var(--surface); }
 .result-block p { margin: 0 0 var(--s4); }
 
+.tool-page { width: min(calc(100% - (var(--s4) * 2)), var(--page-w)); margin-inline: auto; padding-block: var(--s5) var(--s8); }
+.breadcrumb { margin: 0 0 var(--s5); color: var(--ink-soft); font-size: var(--text-sm); }
+.breadcrumb a { color: var(--ink-soft); }
+.tool-page h1 { max-width: var(--tool-w); margin: 0 0 var(--s2); font-size: var(--text-2xl); line-height: 1.15; }
+.lede { max-width: 65ch; margin: 0 0 var(--s2); color: var(--ink-soft); }
+.privacy-label { display: flex; max-width: var(--tool-w); align-items: center; gap: var(--s2); margin: 0 0 var(--s5); color: var(--ink-soft); font-size: var(--text-sm); }
+.tool-panel { width: min(100%, var(--tool-w)); padding: var(--s4); border: var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s4); }
+.hint { flex-basis: 100%; margin: 0; color: var(--ink-soft); font-size: var(--text-sm); }
+.how, .faq, .related { width: min(100%, var(--tool-w)); margin-top: var(--s7); }
+.how h2, .faq h2, .related h2 { margin: 0 0 var(--s3); font-size: var(--text-lg); }
+.how ol, .related ul { margin: 0; padding-left: var(--s5); }
+.how li, .related li { padding-block: var(--s1); }
+.faq h3 { margin: var(--s4) 0 var(--s1); font-size: var(--text-md); }
+.faq p { margin: 0; color: var(--ink-soft); }
+.link-button { min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
 @media (min-width: 640px) {
-  .page-width { width: min(calc(100% - (var(--s5) * 2)), var(--page-w)); }
+  .page-width, .tool-page { width: min(calc(100% - (var(--s5) * 2)), var(--page-w)); }
   .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 900px) { .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -138,7 +159,9 @@ button { cursor: pointer; }
   .home-main { padding-block: var(--s6) var(--s7); }
   .intro-line { margin-bottom: var(--s5); }
   .drop-zone { min-height: 96px; }
-  .drop-zone p { display: none; }
+  .drop-zone-title, .drop-zone-hint { display: none; }
+  .file-row-details { font-size: 11px; }
+  .file-row-action, .file-row-remove { min-width: 44px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (prefers-reduced-motion: no-preference) { .progress-bar { transition: transform 120ms; } }

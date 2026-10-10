@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merge PDF online, free: UniTools</title>
+  <meta name="description" content="Combine several PDF files into one. Runs in your browser, nothing is uploaded.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="module" src="/assets/js/tools/merge-pdf.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="wordmark" href="/">UniTools</a>
+      <nav class="header-actions" aria-label="Site controls">
+        <a class="quiet-link" href="/#tools">Search tools</a>
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+          <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#moon"></use></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tool-page">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#tools">PDF</a> / Merge PDF</p>
+    <h1>Merge PDF files</h1>
+    <p class="lede">Combine several PDFs into one file, in the order you choose.</p>
+    <p class="privacy-label"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#lock"></use></svg>Files never leave your device.</p>
+
+    <section class="tool-panel" aria-labelledby="tool-heading">
+      <h2 id="tool-heading" class="sr-only">Merge PDF tool</h2>
+      <label class="drop-zone" data-dropzone>
+        <input class="sr-only" type="file" accept="application/pdf" multiple>
+        <span class="drop-zone-title">Drop PDF files here</span>
+        <span class="button button-secondary">Choose files</span>
+        <small class="drop-zone-hint">PDF only. Up to 100 MB in total.</small>
+      </label>
+
+      <ul class="file-list" data-file-list aria-label="PDF files to merge"></ul>
+      <div class="actions">
+        <button class="button button-primary" type="button" data-merge disabled>Merge PDF</button>
+        <button class="link-button" type="button" data-reset hidden>Start over</button>
+        <p class="hint" data-run-hint>Add at least 2 PDF files.</p>
+      </div>
+      <div data-progress hidden></div>
+      <div class="message" data-message role="status" aria-live="polite" hidden></div>
+      <div class="result-block" data-result aria-live="polite" hidden>
+        <p data-result-summary></p>
+        <a class="button button-primary" data-download download="merged.pdf">Download merged.pdf</a>
+      </div>
+    </section>
+
+    <section class="how">
+      <h2>How it works</h2>
+      <ol>
+        <li>Add your PDF files.</li>
+        <li>Move them into the order you want.</li>
+        <li>Press Merge PDF and download the result.</li>
+      </ol>
+    </section>
+
+    <section class="faq">
+      <h2>Questions</h2>
+      <h3>Is my file uploaded anywhere?</h3>
+      <p>No. The merge happens inside your browser. The file never leaves your device.</p>
+      <h3>Is there a limit?</h3>
+      <p>No daily limit and no signup. Very large files depend on your device's memory.</p>
+    </section>
+
+    <section class="related">
+      <h2>Related tools</h2>
+      <ul>
+        <li><a href="/tools/split-pdf.html">Split PDF</a></li>
+        <li><a href="/tools/jpg-to-pdf.html">JPG to PDF</a></li>
+        <li><a href="/tools/compress-pdf.html">Compress PDF</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <p>Privacy and acceptable use <span aria-hidden="true">|</span> <a href="/feedback.html">Request a tool or report a bug</a> <span aria-hidden="true">|</span> Made by Harshit</p>
+    </div>
+  </footer>
+</body>
+</html>

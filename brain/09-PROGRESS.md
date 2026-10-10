@@ -13,7 +13,7 @@
 
 ## Tools (tick when it passes brain/07)
 ### Phase 1
-- [ ] 1 Merge PDF
+- [x] 1 Merge PDF
 - [ ] 2 Split PDF
 - [ ] 3 JPG to PDF
 - [ ] 4 PDF to JPG
